@@ -1,0 +1,102 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #fcf1f1;
+  color: rgb(13, 14, 14);
+  transition: background 0.3s, color 0.3s;
+}
+
+.dark-mode {
+  background-color: #1f1f1f;
+  color: #f5f5f5;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+}
+
+.display {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+button {
+  background: #111;
+  color: #0ff;
+  border: 2px solid #0ff;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-family: 'Orbitron', sans-serif;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-shadow: 0 0 5px #0ff;
+  box-shadow: 0 0 15px #0ff, inset 0 0 10px #0ff;
+  transition: 0.2s ease-in-out;
+}
+
+button:hover {
+  background: #0ff;
+  color: #000;
+  box-shadow: 0 0 20px #0ff, 0 0 30px #0ff, inset 0 0 10px #000;
+  transform: scale(1.05);
+}
+
+
+.box {
+  background: #000;
+  color: lime;
+  font-family: 'Courier New', monospace;
+  padding: 100px;
+  border: 2px solid lime;
+  border-radius: 10px;
+  box-shadow: 0 0 20px lime;
+  transition: 0.3s;
+}
+
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.shake-box {
+  animation: shake 0.5s infinite;
+}
+
+
+@media (max-width: 600px) {
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    width: 90%;
+  }
+}
